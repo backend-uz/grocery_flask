@@ -9,20 +9,20 @@ url = 'http://boleha4173.pythonanywhere.com/'
 
 @app.route('/', methods=['GET'])
 def home():
-    return """
+    return f"""
     <h1>Grocery list by</h1>
     <ul>
-        <li><a href=f"{url}grocery">All products</a></li>
-        <li><a href=f"{url}grocery/name/Sugar">Grocery by name<a/>
-        <li><a href=f"{url}grocery/price/2.5">Grocery by price<a/>
-        <li><a href=f"{url}add">Add product with POST method</a>
+        <li><a href="{url}grocery">All products</a></li>
+        <li><a href="{url}grocery/name/Sugar">Grocery by name<a/>
+        <li><a href="{url}grocery/price/2.5">Grocery by price<a/>
+        <li><a href="{url}add">Add product with POST method</a>
 
         <ul><h4>Types</h4>
-            <li><a href="http://127.0.0.1:5000/grocery/type/fruit">Fruits</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/dairy">Dairy Products</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/vegetable">Vegetables</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/bakery">Bakery</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/grain">Grain</a></li>
+            <li><a href="{url}grocery/type/fruit">Fruits</a></li>
+            <li><a href="{url}grocery/type/dairy">Dairy Products</a></li>
+            <li><a href="{url}grocery/type/vegetable">Vegetables</a></li>
+            <li><a href="{url}grocery/type/bakery">Bakery</a></li>
+            <li><a href="{url}grocery/type/grain">Grain</a></li>
         </ul>
 
     </ul>"""
@@ -34,20 +34,20 @@ def home():
 def all_grocery():
     """Get all grocery"""
     product = db.all()
-    table = """
+    table = f"""
     <h1>Grocery list by</h1>
     <ul>
-        <li><a href="http://127.0.0.1:5000/grocery">All products</a></li>
-        <li><a href="http://127.0.0.1:5000/grocery/name/Sugar">Grocery by name<a/>
-        <li><a href="http://127.0.0.1:5000/grocery/price/2.5">Grocery by price<a/>
-        <li><a href="http://127.0.0.1:5000/add">Add product with POST method</a>
+        <li><a href="{url}grocery">All products</a></li>
+        <li><a href="{url}grocery/name/Sugar">Grocery by name<a/>
+        <li><a href="{url}grocery/price/2.5">Grocery by price<a/>
+        <li><a href="{url}add">Add product with POST method</a>
 
         <ul><h4>Types</h4>
-            <li><a href="http://127.0.0.1:5000/grocery/type/fruit">Fruits</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/dairy">Dairy Products</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/vegetable">Vegetables</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/bakery">Bakery</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/grain">Grain</a></li>
+            <li><a href="{url}grocery/type/fruit">Fruits</a></li>
+            <li><a href="{url}grocery/type/dairy">Dairy Products</a></li>
+            <li><a href="{url}grocery/type/vegetable">Vegetables</a></li>
+            <li><a href="{url}grocery/type/bakery">Bakery</a></li>
+            <li><a href="{url}grocery/type/grain">Grain</a></li>
         </ul>
 
     </ul>
@@ -85,20 +85,20 @@ def add_grocery():
 def all_grocery_by_type(tur):
     """Get all grocery by type"""
     product = db.get_by_type(tur)
-    table = """
+    table = f"""
     <h1>Grocery list by</h1>
     <ul>
-        <li><a href="http://127.0.0.1:5000/grocery">All products</a></li>
-        <li><a href="http://127.0.0.1:5000/grocery/name/Sugar">Grocery by name<a/>
-        <li><a href="http://127.0.0.1:5000/grocery/price/2.5">Grocery by price<a/>
-        <li><a href="http://127.0.0.1:5000/add">Add product with POST method</a>
+        <li><a href="{url}grocery">All products</a></li>
+        <li><a href="{url}grocery/name/Sugar">Grocery by name<a/>
+        <li><a href="{url}grocery/price/2.5">Grocery by price<a/>
+        <li><a href="{url}add">Add product with POST method</a>
 
         <ul><h4>Types</h4>
-            <li><a href="http://127.0.0.1:5000/grocery/type/fruit">Fruits</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/dairy">Dairy Products</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/vegetable">Vegetables</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/bakery">Bakery</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/grain">Grain</a></li>
+            <li><a href="{url}grocery/type/fruit">Fruits</a></li>
+            <li><a href="{url}grocery/type/dairy">Dairy Products</a></li>
+            <li><a href="{url}grocery/type/vegetable">Vegetables</a></li>
+            <li><a href="{url}grocery/type/bakery">Bakery</a></li>
+            <li><a href="{url}grocery/type/grain">Grain</a></li>
         </ul>
 
     </ul>
@@ -126,20 +126,20 @@ def all_grocery_by_type(tur):
 def all_grocery_by_name(name):
     """Get all grocery by name"""
     product = db.get_by_name(name)
-    table = """
+    table = f"""
     <h1>Grocery list by</h1>
     <ul>
-        <li><a href="http://127.0.0.1:5000/grocery">All products</a></li>
-        <li><a href="http://127.0.0.1:5000/grocery/name/Sugar">Grocery by name<a/>
-        <li><a href="http://127.0.0.1:5000/grocery/price/2.5">Grocery by price<a/>
-        <li><a href="http://127.0.0.1:5000/add">Add product with POST method</a>
+        <li><a href="{url}grocery">All products</a></li>
+        <li><a href="{url}grocery/name/Sugar">Grocery by name<a/>
+        <li><a href="{url}grocery/price/2.5">Grocery by price<a/>
+        <li><a href="{url}add">Add product with POST method</a>
 
         <ul><h4>Types</h4>
-            <li><a href="http://127.0.0.1:5000/grocery/type/fruit">Fruits</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/dairy">Dairy Products</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/vegetable">Vegetables</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/bakery">Bakery</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/grain">Grain</a></li>
+            <li><a href="{url}grocery/type/fruit">Fruits</a></li>
+            <li><a href="{url}grocery/type/dairy">Dairy Products</a></li>
+            <li><a href="{url}grocery/type/vegetable">Vegetables</a></li>
+            <li><a href="{url}grocery/type/bakery">Bakery</a></li>
+            <li><a href="{url}grocery/type/grain">Grain</a></li>
         </ul>
 
     </ul>
@@ -167,20 +167,20 @@ def all_grocery_by_name(name):
 def all_grocery_by_price(price):
     """Get all grocery by price"""
     product = db.get_by_price(price)
-    table = """
+    table = f"""
     <h1>Grocery list by</h1>
     <ul>
-        <li><a href="http://127.0.0.1:5000/grocery">All products</a></li>
-        <li><a href="http://127.0.0.1:5000/grocery/name/Sugar">Grocery by name<a/>
-        <li><a href="http://127.0.0.1:5000/grocery/price/2.5">Grocery by price<a/>
-        <li><a href="http://127.0.0.1:5000/add">Add product with POST method</a>
+        <li><a href="{url}grocery">All products</a></li>
+        <li><a href="{url}grocery/name/Sugar">Grocery by name<a/>
+        <li><a href="{url}grocery/price/2.5">Grocery by price<a/>
+        <li><a href="{url}add">Add product with POST method</a>
 
         <ul><h4>Types</h4>
-            <li><a href="http://127.0.0.1:5000/grocery/type/fruit">Fruits</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/dairy">Dairy Products</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/vegetable">Vegetables</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/bakery">Bakery</a></li>
-            <li><a href="http://127.0.0.1:5000/grocery/type/grain">Grain</a></li>
+            <li><a href="{url}grocery/type/fruit">Fruits</a></li>
+            <li><a href="{url}grocery/type/dairy">Dairy Products</a></li>
+            <li><a href="{url}grocery/type/vegetable">Vegetables</a></li>
+            <li><a href="{url}grocery/type/bakery">Bakery</a></li>
+            <li><a href="{url}grocery/type/grain">Grain</a></li>
         </ul>
 
     </ul>
