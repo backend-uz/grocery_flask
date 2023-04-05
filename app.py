@@ -17,6 +17,7 @@ def home():
     return f"""
     <h1>Grocery list by</h1>
     <ul>
+        <li><a href="{url}api">Api</a></li>
         <li><a href="{url}grocery">All products</a></li>
         <li><a href="{url}grocery/name/Sugar">Grocery by name<a/>
         <li><a href="{url}grocery/price/2.5">Grocery by price<a/>
@@ -31,7 +32,6 @@ def home():
         </ul>
 
     </ul>"""
-
 
 
 # view all grocery
