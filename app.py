@@ -7,6 +7,11 @@ db = GroceryDB()
 
 url = 'http://boleha4173.pythonanywhere.com/'
 
+@app.route('/api')
+def api():
+    return db.all()
+
+
 @app.route('/', methods=['GET'])
 def home():
     return f"""
