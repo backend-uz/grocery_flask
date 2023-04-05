@@ -209,6 +209,42 @@
             "quantity": 10,
             "price": 4.8,
             "type": "fruit"
+        },
+        "36": {
+            "name": "watermelon",
+            "quantity": 3,
+            "price": 3.5,
+            "type": "fruit"
+        },
+        "37": {
+            "name": "watermelon",
+            "quantity": 3,
+            "price": 3.5,
+            "type": "fruit"
+        },
+        "38": {
+            "name": "watermelon",
+            "quantity": 3,
+            "price": 3.5,
+            "type": "fruit"
+        },
+        "39": {
+            "name": "watermelon",
+            "quantity": 3,
+            "price": 3.5,
+            "type": "fruit"
+        },
+        "40": {
+            "name": "watermelon",
+            "quantity": 3,
+            "price": 3.5,
+            "type": "fruit"
+        },
+        "41": {
+            "name": "watermelon",
+            "quantity": 3,
+            "price": 3.5,
+            "type": "fruit"
         }
     }
 }
